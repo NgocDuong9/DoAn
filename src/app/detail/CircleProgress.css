@@ -1,0 +1,11 @@
+/* src/CircleProgress.css */
+.circle-progress {
+  transform: rotate(36deg);
+}
+
+.circle-progress-background,
+.circle-progress-bar {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}

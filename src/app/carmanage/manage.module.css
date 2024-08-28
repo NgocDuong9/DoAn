@@ -1,0 +1,39 @@
+.textFi {
+  font-size: 230px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 120%;
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 2550, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* margin: auto auto; */
+}
+
+.boxCard {
+  border-radius: 42px;
+  background: linear-gradient(
+    126deg,
+    rgba(24, 24, 24, 0.24) 28.96%,
+    rgba(18, 18, 18, 0.21) 113.98%
+  );
+  backdrop-filter: blur(13.350000381469727px);
+  width: 371px;
+  height: 174px;
+}
+
+.boxChat {
+  max-width: 382px;
+  width: 100%;
+  height: 260px;
+  position: relative;
+}
+
+/* 
+  .main {
+
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 140px;
+  } */

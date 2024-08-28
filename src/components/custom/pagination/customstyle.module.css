@@ -1,0 +1,29 @@
+.control,
+.controlMobile {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  font-weight: 500;
+  color: #333;
+  border: none;
+}
+
+.controlMobile {
+  width: 36px;
+  height: 36px;
+}
+
+.control:where([data-active]),
+.controlMobile:where([data-active]) {
+  background: linear-gradient(90deg, #52bae6 0%, #67f2d1 99.99%, #51c2a7 100%);
+  border: none;
+  color: #fff;
+}
+
+.root button:first-child {
+  display: none;
+}
+
+.root button:last-child {
+  display: none;
+}

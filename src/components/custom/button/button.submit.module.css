@@ -1,0 +1,18 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  border: none;
+  background: var(
+    --Gradient,
+    linear-gradient(90deg, #258dba 0%, #26d3e0 51.5%, #8bf6c8 98.5%)
+  );
+
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

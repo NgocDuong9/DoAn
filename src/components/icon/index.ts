@@ -1,0 +1,9 @@
+export {default as IconSearch} from "./search.header";
+export {default as IconVoice} from "./voice.header";
+export {default as IconChat} from "./chat.header";
+export {default as IconTiktok} from "./tiktok";
+export {default as IconInstagram} from "./instagram";
+export {default as IconFacebook} from "./facebook";
+export {default as IconClock} from './clock'
+export {default as IconNote} from './note'
+export {default as IconShop} from './shop'

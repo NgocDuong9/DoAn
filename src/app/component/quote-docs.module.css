@@ -1,0 +1,43 @@
+.main {
+  /* background-image: url("/box/line-firca.png"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  margin-top: 60px;
+  padding-top: 10px;
+}
+
+.input {
+  height: 70px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  border-radius: 11px;
+  border: 1px solid #fff;
+  outline: none;
+  color: #222;
+  background: #ecf3f5;
+
+  &::placeholder {
+    color: #666;
+    opacity: 1; /* Firefox */
+  }
+}
+
+.textFi {
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 120%;
+  letter-spacing: 80px;
+
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 2550, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
