@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import ErrorPage from "../error-page";
-import MainLayout from "../layout/main-layout";
-import Contact from "./contract";
-import { ProtectedRoute, PublicRoute } from "./role-router";
 import { AuthLayout } from "../layout/auth-layout";
+import MainLayout from "../layout/main-layout";
+import { ProtectedRoute, PublicRoute } from "./role-router";
+import Brand from "../page/brand";
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +25,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/brand",
-        element: <></>,
+        element: <Brand />,
       },
       {
         path: "/brand:id",

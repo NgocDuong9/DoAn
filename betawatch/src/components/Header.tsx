@@ -1,80 +1,85 @@
-import React, { useState } from "react";
+import React from "react";
 
-import {
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
 import type { MenuProps } from "antd";
-import { Menu } from "antd";
+import { Image, Menu } from "antd";
+import { useLocation, useNavigate } from "react-router";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
 const items: MenuItem[] = [
   {
-    label: "Navigation One",
-    key: "",
+    label: "Home",
+    key: "/",
   },
   {
-    label: "Navigation One",
-    key: "mail",
-    icon: <MailOutlined />,
+    label: "Thương hiệu",
+    key: "/brand",
   },
   {
-    label: "Navigation Two",
-    key: "app",
-    icon: <AppstoreOutlined />,
-  },
-  {
-    label: "Navigation Three - Submenu",
-    key: "SubMenu",
-    icon: <SettingOutlined />,
+    label: "Đồng hồ nam",
+    key: "/male",
     children: [
       {
-        type: "group",
         label: "Item 1",
-        children: [
-          { label: "Option 1", key: "setting:1" },
-          { label: "Option 2", key: "setting:2" },
-        ],
+        key: "/male-1",
       },
       {
-        type: "group",
         label: "Item 2",
-        children: [
-          { label: "Option 3", key: "setting:3" },
-          { label: "Option 4", key: "setting:4" },
-        ],
+        key: "/male-2",
       },
     ],
   },
   {
-    key: "alipay",
-    label: (
-      <a href="https://ant.design" target="_blank" rel="noopener noreferrer">
-        Navigation Four - Link
-      </a>
-    ),
+    label: "Đồng hồ nữ",
+    key: "/female",
+    children: [
+      {
+        label: "Item 1",
+        key: "/female-1",
+      },
+      {
+        label: "Item 2",
+        key: "/female-2",
+      },
+    ],
+  },
+  {
+    label: "Cặp đôi",
+    key: "/couple",
+  },
+  {
+    label: "Sửa chữa",
+    key: "/repair",
+  },
+  {
+    label: "Phụ kiện",
+    key: "/accessory",
   },
 ];
 
 const Header: React.FC = () => {
-  const [current, setCurrent] = useState("mail");
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const onClick: MenuProps["onClick"] = (e) => {
-    console.log("click ", e);
-    setCurrent(e.key);
+    navigate(e.key);
   };
 
   return (
-    <div className="flex">
-      <div className="bg-white">Some Content</div>
+    <div className="flex w-full justify-center gap-3 bg-white py-3">
+      <Image
+        src="/image/logo-nt.png"
+        preview={false}
+        className="max-w-[50px] bg-white"
+      />
+
       <Menu
         onClick={onClick}
-        selectedKeys={[current]}
+        selectedKeys={[location.pathname]}
         mode="horizontal"
         items={items}
-        style={{ minWidth: 0, flex: "auto" }}
+        className="min-w-[700px]"
+        // style={{ minWidth: 0 }}
       />
     </div>
   );
