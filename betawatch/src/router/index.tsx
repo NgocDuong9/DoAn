@@ -4,6 +4,9 @@ import { AuthLayout } from "../layout/auth-layout";
 import MainLayout from "../layout/main-layout";
 import { ProtectedRoute, PublicRoute } from "./role-router";
 import Brand from "../page/brand";
+import Login from "../page/login/Login";
+import Signin from "../page/login/Signin";
+import Home from "../page/home";
 
 export const router = createBrowserRouter([
   {
@@ -17,11 +20,15 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/login",
-        element: <p>loginnnn</p>,
+        element: <Login />,
+      },
+      {
+        path: "/home",
+        element: <Home />,
       },
       {
         path: "/signin",
-        element: <></>,
+        element: <Signin />,
       },
       {
         path: "/brand",

@@ -1,5 +1,3 @@
-import React from "react";
-
 import type { MenuProps } from "antd";
 import { Image, Menu } from "antd";
 import { useLocation, useNavigate } from "react-router";
@@ -9,7 +7,7 @@ type MenuItem = Required<MenuProps>["items"][number];
 const items: MenuItem[] = [
   {
     label: "Home",
-    key: "/",
+    key: "/home",
   },
   {
     label: "Thương hiệu",
@@ -55,9 +53,13 @@ const items: MenuItem[] = [
     label: "Phụ kiện",
     key: "/accessory",
   },
+  {
+    label: "Đăng nhập",
+    key: "/login",
+  },
 ];
 
-const Header: React.FC = () => {
+const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -78,7 +80,7 @@ const Header: React.FC = () => {
         selectedKeys={[location.pathname]}
         mode="horizontal"
         items={items}
-        className="min-w-[700px]"
+        className="min-w-[800px]"
         // style={{ minWidth: 0 }}
       />
     </div>
